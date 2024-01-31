@@ -188,11 +188,11 @@ public class TaskController {
     int id = Integer.parseInt(sc.nextLine());
     task = repository.getById(id);
 
-    if (repository.getClass().getName().equals("be.com.ada.pooii.Repository.PersonalTaskRepository")) {
+    if (task instanceof PersonalTask) {
       personalTaskRepo.delete(id);
-    } else if (repository.getClass().getName().equals("be.com.ada.pooii.Repository.WorkTaskRepository")) {
+    } else if (task instanceof WorkTask) {
       workTaskRepo.delete(id);
-    } else if (repository.getClass().getName().equals("be.com.ada.pooii.Repository.StudyTaskRepository")) {
+    } else if (task instanceof StudyTask) {
       studyTaskRepo.delete(id);
     } else {
       System.out.println("ERRO: classe inexistente");

@@ -20,7 +20,10 @@ public class StudyTaskRepository implements Repository {
 
   @Override
   public Task getById(int id) {
-    return tasks.get(id);
+    for (Task task : tasks) {
+      if(task.getId()==id) return task;
+    }
+    return null;
   }
 
   @Override
@@ -37,7 +40,8 @@ public class StudyTaskRepository implements Repository {
 
   @Override
   public void delete(int id) {
-    tasks.remove(id);
+    Task task = getById(id);
+    tasks.remove(task);
     System.out.println("Tarefa removida");
   }
 }

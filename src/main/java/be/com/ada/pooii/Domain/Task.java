@@ -1,21 +1,25 @@
 package be.com.ada.pooii.Domain;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
-public abstract class BaseTask {
+public abstract class Task {
   private final int id;
   private String title;
   private String description;
-  private LocalDateTime creationDate;
-  private LocalDateTime deadline;
+  private Date creationDate;
+  private Date deadline;
   private static int nextId = 0;
 
-  public BaseTask(String title, String description, LocalDateTime creation, LocalDateTime deadline) {
+  public Task(String title, String description, Date creation, Date deadline) {
     this.id = nextId++;
     this.title = title;
     this.description = description;
     this.creationDate = creation;
     this.deadline = deadline;
+  }
+
+  public int getId() {
+    return id;
   }
 
   public String getTitle() {
@@ -34,19 +38,19 @@ public abstract class BaseTask {
     this.description = description;
   }
 
-  public LocalDateTime getCreationDate() {
+  public Date getCreationDate() {
     return creationDate;
   }
 
-  public void setCreationDate(LocalDateTime creationDate) {
+  public void setCreationDate(Date creationDate) {
     this.creationDate = creationDate;
   }
 
-  public LocalDateTime getDeadline() {
+  public Date getDeadline() {
     return deadline;
   }
 
-  public void setDeadline(LocalDateTime deadline) {
+  public void setDeadline(Date deadline) {
     this.deadline = deadline;
   }
 }

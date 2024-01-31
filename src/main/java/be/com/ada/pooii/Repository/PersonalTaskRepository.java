@@ -5,10 +5,10 @@ import be.com.ada.pooii.Domain.Task;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskRepository implements Repository {
+public class PersonalTaskRepository implements Repository {
   private static List<Task> tasks;
 
-  public TaskRepository() {
+  public PersonalTaskRepository() {
     tasks = new ArrayList<>();
   }
   @Override

@@ -19,9 +19,7 @@ public class TaskService {
   }
 
   public Task getTask(int id) {
-    Task task = repository.getById(id);
-    System.out.println(task.toString());
-    return task;
+    return repository.getById(id);
   }
 
   public List<Task> getAllTasks(){

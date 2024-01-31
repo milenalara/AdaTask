@@ -29,7 +29,8 @@ public class PersonalTaskRepository implements Repository {
 
   @Override
   public void update(int id, Task newTask) {
-    tasks.set(id, newTask);
+    tasks.remove(id);
+    tasks.add(id, newTask);
     System.out.println("Tarefa alterada");
     System.out.println(newTask.toString());
   }

@@ -10,6 +10,11 @@ public class WorkTask extends Task {
     this.project = project;
   }
 
+  public WorkTask(int id, String title, String description, Date creation, Date deadline, String project) {
+    super(id, title, description, creation, deadline);
+    this.project = project;
+  }
+
   public String getProject() {
     return project;
   }

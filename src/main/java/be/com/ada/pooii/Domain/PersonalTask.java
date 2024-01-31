@@ -9,6 +9,10 @@ public class PersonalTask extends Task {
     super(title, description, creation, deadline);
     this.category = category;
   }
+  public PersonalTask(int id, String title, String description, Date creation, Date deadline, String category) {
+    super(id, title, description, creation, deadline);
+    this.category = category;
+  }
 
   public String getCategory() {
     return category;

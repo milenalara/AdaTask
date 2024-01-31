@@ -9,6 +9,10 @@ public class StudyTask extends Task {
     super(title, description, creation, deadline);
     this.subject = subject;
   }
+  public StudyTask(int id, String title, String description, Date creation, Date deadline, String subject) {
+    super(id, title, description, creation, deadline);
+    this.subject = subject;
+  }
 
   public String getSubject() {
     return subject;

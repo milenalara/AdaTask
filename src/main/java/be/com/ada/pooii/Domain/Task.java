@@ -17,6 +17,13 @@ public abstract class Task {
     this.creationDate = creation;
     this.deadline = deadline;
   }
+  public Task(int id, String title, String description, Date creation, Date deadline) {
+    this.id = id;
+    this.title = title;
+    this.description = description;
+    this.creationDate = creation;
+    this.deadline = deadline;
+  }
 
   public int getId() {
     return id;
